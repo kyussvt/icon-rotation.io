@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (images.length > 0) {
                 const randomIndex = Math.floor(Math.random() * images.length);
                 const randomImage = images[randomIndex];
-                const imageUrl = `https://kyussvt.github.io/${randomImage}`;
+                const imageUrl = `https://kyussvt.github.io/images/${randomImage}`;
                 
                 const randomImageElement = document.getElementById('randomImage');
                 randomImageElement.src = imageUrl;
