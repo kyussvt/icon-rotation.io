@@ -97,7 +97,7 @@
 
 */ 
 
-    $folder = './images'; 
+    $folder = './images/'; 
 
 /*     
 
