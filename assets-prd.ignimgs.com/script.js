@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log('Document loaded, starting script...');
     
-    fetch('images.json')
+    fetch('assets-prd.ignimgs.com/images.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (images.length > 0) {
                 const randomIndex = Math.floor(Math.random() * images.length);
                 const randomImage = images[randomIndex];
-                const imageUrl = `https://kyussvt.github.io/assets-prd.ignimgs.com/${randomImage}`;
+                const baseUrl = 'https://kyussvt.github.io/assets-prd.ignimgs.com/images/';
+                const imageUrl = `${baseUrl}${randomImage}`;
                 console.log('Random image URL:', imageUrl);
 
                 // Change the image src
