@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const imageElement = document.getElementById('randomImage');
-    
     fetch('images.json')
         .then(response => response.json())
         .then(images => {
             if (images.length > 0) {
                 const randomIndex = Math.floor(Math.random() * images.length);
-                imageElement.src = images[randomIndex];
+                const randomImage = images[randomIndex];
+                const imageUrl = `https://kyussvt.github.io/images/${randomImage}`;
+                
+                const randomImageElement = document.getElementById('randomImage');
+                randomImageElement.src = imageUrl;
             } else {
                 console.error("No images found in the JSON file.");
             }
